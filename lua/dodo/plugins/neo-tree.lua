@@ -4,15 +4,15 @@ return {
 	init = function() 
 		vim.g.neo_tree_remove_legacy_commands = 1 
 	end,
-	dependencies = {
-      		"nvim-lua/plenary.nvim",
-      		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      		"MunifTanjim/nui.nvim"
+	opts = {
+		popup_border_style = "rounded",
 	},
-	config = function()
-		require("neo-tree").setup({
-			popup_border_style = "rounded",
-		})
-
+	dependencies = {
+  	"nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim"
+	},
+	config = function(_, opts)
+		require("neo-tree").setup(opts)
 	end
 }
