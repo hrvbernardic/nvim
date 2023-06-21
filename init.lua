@@ -1,3 +1,3 @@
 require('dodo/core/general')
-require('dodo/core/keymap')
 require('dodo/lazy')
+require('dodo/core/keymap')
