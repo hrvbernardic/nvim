@@ -54,20 +54,21 @@ return {
 				server = {
 					capabilities = capabilities,
 					on_attach = on_attach,
+					root_dir = util.root_pattern("tsconfig.base.json", ".git")
 				}
 			})
 
 			lspconfig["angularls"].setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
-				root_dir = util.root_pattern('angular.json', 'project.json')
+				root_dir = util.root_pattern('nx.json', 'project.json', 'angular.json')
 			})
 
 			lspconfig["html"].setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
-			
+
 			lspconfig["cssls"].setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
