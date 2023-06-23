@@ -61,7 +61,7 @@ return {
 			lspconfig["angularls"].setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
-				root_dir = util.root_pattern('nx.json', 'project.json', 'angular.json')
+				root_dir = util.root_pattern('.git')
 			})
 
 			lspconfig["html"].setup({
@@ -84,9 +84,7 @@ return {
       { "nvim-tree/nvim-web-devicons" },
       { "nvim-treesitter/nvim-treesitter" },
     },
-		config = function()
-        require("lspsaga").setup({})
-    end,
+		opts = {},
   }
 }
 
